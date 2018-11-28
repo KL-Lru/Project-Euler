@@ -15,9 +15,9 @@ fullFactorization x limit [] = fullFactorization x limit (factorization 1 2 0 li
 fullFactorization x limit factlist | x == limit =  (merge (factorization x 2 0 limit) factlist)
                                    | otherwise = (merge (factorization x 2 0 limit) (fullFactorization (x+1) limit factlist) )
 
-powerNoneZero :: Int -> [Int] -> Int
-powerNoneZero _ [] = 1
-powerNoneZero now (x:xs) = (now ^ x) * powerNoneZero (now + 1) xs
+powerProduct :: Int -> [Int] -> Int
+powerProduct _ [] = 1
+powerProduct now (x:xs) = (now ^ x) * powerProduct (now + 1) xs
 
 main = do
-  print $ powerNoneZero 2 (fullFactorization 1 20 [])
+  print $ powerProduct 2 (fullFactorization 1 20 [])
