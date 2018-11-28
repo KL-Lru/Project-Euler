@@ -17,8 +17,7 @@ fullFactorization x limit factlist | x == limit =  (merge (factorization x 2 0 l
 
 powerNoneZero :: Int -> [Int] -> Int
 powerNoneZero _ [] = 1
-powerNoneZero now (x:xs) | x == 0 = powerNoneZero (now + 1) xs
-                         | otherwise = (now ^ x) * powerNoneZero (now + 1) xs
+powerNoneZero now (x:xs) = (now ^ x) * powerNoneZero (now + 1) xs
 
 main = do
   print $ powerNoneZero 2 (fullFactorization 1 20 [])
