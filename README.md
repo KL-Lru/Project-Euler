@@ -1,2 +1,3 @@
 # Project-Euler-Solusions
-This Repository is made for put away sourse code to solve Project Euler.
+このリポジトリはProject Eulerの解法ソースコードを置くために作られました.
+現在はHaskellの練習がてらソースの書き直し等を行っています…
