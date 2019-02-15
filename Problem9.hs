@@ -1,5 +1,3 @@
-import Debug.Trace
-
 pythagorasProduct :: Int -> Int -> Int
 pythagorasProduct a b 
   | isPythagoras a b c = a*b*c
